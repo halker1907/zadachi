@@ -1,17 +1,17 @@
-def test(word_1:str, word_2:str) -> bool:
-	if len(word_1) != len(word_2):
-		return False
+text = input()
+text = text.replace(" ", "")
+text = list(text)
+vowels = "ауоиэыяюеё"
+changes = 0
 
-	for letter in word_1:
-		if not letter in word_2:
-			return False
-	return True
+for i in range(len(text - 1)):
+    if text[i] in vowels:
+        text[i + 1] in vowels
+        #добавляем к счетчику изменений 1
+        #заменить следующую букву на согласную
+    else:
+        text[i + 1] not in vowels
+        #добавляем к счетчику изменений 1
+        #заменить следующую букву на гласную
 
-	
-
-assert test("дуб", "буд") == True
-assert test("дуб", "бут") == False
-assert test("", "дуб") == False
-assert test("","") == True
-assert test("дуб","дубб") == False
-assert test("дуб","ду") == False
+print(changes)
